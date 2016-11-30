@@ -1,0 +1,36 @@
+<div class="header">
+  <div class="container">
+    <%= image_tag "dialog_logo.png" %>
+    <h1>Messenger</h1>
+  </div>
+</div>
+
+<div class="app_description"> 
+    <div style="padding: 10px">
+      <p>Decription:</p>
+      <br>
+      <p>This is a message board that can be used in applications such as comments on an article, feedback, or just simply dialog on social applications.
+         User authentication could be added to give individuals there own secure sessions for making comments.</p>
+       <br>
+       <p>
+         Author: Brad Beiermann
+       </p>
+    </div>  
+  </div>
+
+<div class="create">
+  <div class="container">
+    
+    <!-- Your code here -->
+ <%= form_for(@message) do |f| %>  
+  <div class="field"> 
+    <%= f.label :message %><br> 
+    <%= f.text_area :content %> 
+  </div> 
+  <div class="actions"> 
+    <%= f.submit "Create" %> 
+  </div> 
+<% end %>
+    
+  </div>
+</div>

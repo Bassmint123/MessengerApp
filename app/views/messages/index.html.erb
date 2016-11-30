@@ -1,0 +1,35 @@
+<div class="header">
+  <div class="container">
+    <%= image_tag "dialog_logo.png" %>
+    <h1>Messenger</h1>
+  </div>
+</div>
+
+  <div class="app_description"> 
+    <div style="padding: 10px">
+      <p>Decription:</p>
+      <br>
+      <p>This is a message board that can be used in applications such as comments on an article, feedback, or just simply dialog on social applications.
+         User authentication could be added to give individuals there own secure sessions for making comments.</p>
+       <br>
+       <p>
+       	 Author: Brad Beiermann
+       </p>
+    </div>  
+  </div>
+
+<div class="messages">
+  <div class="container">
+  
+    <!-- Your code here -->
+<% @messages.each do |message| %> 
+<div class="message"> 
+  <p class="content"><%= message.content %></p> 
+  <p class="time"><%= message.created_at %></p> 
+</div> 
+<% end %>
+ 
+<%= link_to 'New Message', "messages/new" %>
+    
+  </div>
+</div>
